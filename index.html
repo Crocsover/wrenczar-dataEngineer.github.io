@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wrenczar Ramos | Data Engineer</title>
+<meta name="description" content="Data Engineer building dbt models, Airflow pipelines and Databricks workflows.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f4f7;--ink:#13203a;--mute:#53607a;--line:#cfd6e2;--card:#fff;--acc:#e8a500;--acc-ink:#13203a}
+@media(prefers-color-scheme:dark){:root{--bg:#0e1626;--ink:#e8edf6;--mute:#9aa7c0;--line:#27344d;--card:#152038;--acc:#f2b705;--acc-ink:#0e1626}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 "IBM Plex Sans",system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 1.25rem}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;flex-wrap:wrap;gap:.5rem}
+.logo{font:800 1.1rem "Bricolage Grotesque",sans-serif;text-decoration:none}
+nav a{margin-left:1.1rem;text-decoration:none;color:var(--mute);font-weight:500}
+nav a:hover{color:var(--ink)}
+.hero{padding:3.5rem 0 2.5rem}
+h1{font:800 clamp(2.6rem,8vw,5rem)/1 "Bricolage Grotesque",sans-serif;margin:0 0 1rem;letter-spacing:-.02em}
+.lead{max-width:56ch;color:var(--mute);font-size:1.2rem;margin:0 0 1.75rem}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:6px;font-weight:500;text-decoration:none;border:2px solid var(--ink)}
+.btn.p{background:var(--acc);border-color:var(--acc);color:var(--acc-ink)}
+.btn:hover{transform:translateY(-2px)}
+.pipe{display:flex;align-items:center;margin:3rem 0 0;overflow-x:auto;padding-bottom:.5rem}
+.node{flex:0 0 auto;background:var(--card);border:2px solid var(--ink);border-radius:8px;padding:.6rem .9rem;font:500 .9rem "IBM Plex Sans",sans-serif;min-width:120px;text-align:center}
+.node small{display:block;color:var(--mute);font-size:.78rem}
+.edge{flex:1 0 28px;height:2px;background:repeating-linear-gradient(90deg,var(--ink) 0 6px,transparent 6px 12px);background-size:12px 2px;animation:flow 1s linear infinite}
+@keyframes flow{to{background-position:12px 0}}
+@media(prefers-reduced-motion:reduce){.edge{animation:none}html{scroll-behavior:auto}}
+section{padding:3rem 0;border-top:1px solid var(--line)}
+h2{font:700 1.8rem "Bricolage Grotesque",sans-serif;margin:0 0 1.5rem}
+h3{font:700 1.15rem "Bricolage Grotesque",sans-serif;margin:0}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem 2rem}
+.skills dt{font-weight:500;color:var(--mute);font-size:.9rem}
+.skills dd{margin:.15rem 0 0}
+.job{display:grid;grid-template-columns:170px 1fr;gap:.5rem 2rem;padding:1.5rem 0;border-bottom:1px solid var(--line)}
+.job:last-child{border:0}
+.when{color:var(--mute);font-size:.92rem}
+.job p{margin:.2rem 0 .5rem;color:var(--mute)}
+.job ul{margin:.4rem 0 0;padding-left:1.1rem}
+.job li{margin:.3rem 0}
+.proj{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.25rem}
+.card{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--acc);border-radius:6px;padding:1.25rem}
+.card p{color:var(--mute);font-size:.97rem;margin:.6rem 0 1rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem}
+.tags span{font-size:.8rem;border:1px solid var(--line);border-radius:99px;padding:.1rem .65rem}
+.links a{margin-right:1rem;font-weight:500}
+footer{padding:2.5rem 0 3rem;border-top:1px solid var(--line);color:var(--mute);font-size:.95rem}
+@media(max-width:640px){.job{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="logo" href="#">Wrenczar Ramos</a>
+  <nav><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main>
+<div class="hero">
+  <h1>I build the pipelines your data runs on.</h1>
+  <p class="lead">Data Engineer in the Philippines working with dbt, Airflow, Databricks and SQL. I turn raw data into tested, reliable tables that teams can trust.</p>
+  <div class="btns">
+    <a class="btn p" href="#projects">See my projects</a>
+    <a class="btn" href="mailto:wrenzcrocs@gmail.com">Email me</a>
+  </div>
+  <div class="pipe" aria-label="Example pipeline: S3 to Airflow to dbt to Databricks to Power BI">
+    <div class="node">S3 / GCS<small>source</small></div><div class="edge"></div>
+    <div class="node">Airflow<small>orchestrate</small></div><div class="edge"></div>
+    <div class="node">dbt + PySpark<small>transform</small></div><div class="edge"></div>
+    <div class="node">Databricks<small>store</small></div><div class="edge"></div>
+    <div class="node">Power BI<small>report</small></div>
+  </div>
+</div>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <dl class="skills">
+    <div><dt>Languages</dt><dd>Python, SQL, Bash, Google Apps Script, HTML, CSS</dd></div>
+    <div><dt>Libraries and frameworks</dt><dd>Pandas, NumPy, dbt, Apache Spark</dd></div>
+    <div><dt>Orchestration and automation</dt><dd>Apache Airflow, Apache NiFi, n8n, Google Apps Script</dd></div>
+    <div><dt>Databases</dt><dd>PostgreSQL, Snowflake</dd></div>
+    <div><dt>Cloud</dt><dd>AWS, Microsoft Azure, Databricks</dd></div>
+    <div><dt>BI and tools</dt><dd>Power BI, Docker, Git, Google Workspace, Data Modeling</dd></div>
+  </dl>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="job">
+    <div class="when">Nov 2024 to present<br>BGC, Taguig</div>
+    <div><h3>Data Engineer</h3><p>NCS-I</p>
+      <ul>
+        <li>Built and maintained dbt models and Airflow DAGs for pipeline orchestration and transformation.</li>
+        <li>Worked in Databricks: SQL Editor, SQL Warehouse, Unity Catalog and notebooks, using PySpark, Scala, SQL and Python.</li>
+        <li>Managed datasets in AWS S3 and Google Cloud Storage.</li>
+        <li>Wrote unit tests in Python and dbt to validate transformations and keep pipelines reliable.</li>
+        <li>Automated repetitive Google Sheets tasks with Google Apps Script.</li>
+        <li>Tracked work in Jira and partnered with stakeholders and technical teams on scalable, maintainable code.</li>
+      </ul></div>
+  </div>
+  <div class="job">
+    <div class="when">Sep to Nov 2024<br>Pasay City</div>
+    <div><h3>Citizen Developer</h3><p>Infinit-O Philippines</p>
+      <ul>
+        <li>Automated account onboarding with Google Apps Script.</li>
+        <li>Documented automated workflows and found new automation opportunities with cross-functional teams.</li>
+        <li>Managed tasks in ClickUp and iterated on automations from team feedback.</li>
+      </ul></div>
+  </div>
+  <div class="job">
+    <div class="when">Jun 2022 to Nov 2024<br>Pasay City</div>
+    <div><h3>Data Entry Specialist</h3><p>Infinit-O Philippines</p>
+      <ul>
+        <li>Member of the data quality team, working in a human-in-the-loop validation process.</li>
+        <li>Validated company domain websites from name and address data.</li>
+        <li>Used Python for data cleaning projects.</li>
+      </ul></div>
+  </div>
+  <div class="job">
+    <div class="when">Feb 2021 to Jan 2022<br>Taguig</div>
+    <div><h3>Documentation Associate</h3><p>Seidopro Global Inc</p>
+      <ul><li>Managed customer bookings and email correspondence, and processed reefer, dangerous and awkward cargo.</li></ul></div>
+  </div>
+  <div class="job">
+    <div class="when">May 2018 to Jun 2020<br>Quezon City</div>
+    <div><h3>Associate Ops</h3><p>WNS Global Services</p>
+      <ul><li>Communicated with onshore clients, managed daily team reports and bookings, and handled awkward cargo billing and collections.</li></ul></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="proj">
+    <article class="card"><h3>Databricks + Azure Data Factory pipeline</h3>
+      <p>Extracts data from Azure Storage, transforms it in Azure Databricks and loads it into Azure SQL Database.</p>
+      <div class="tags"><span>Databricks</span><span>Azure Data Factory</span><span>Azure SQL</span></div>
+      <div class="links"><a href="https://github.com/Crocsover/ETL-PIPELINES/tree/main/AZURE%20DATAPIPELINES">GitHub</a><a href="https://lnkd.in/p/g2f6aTKg">Video</a></div></article>
+    <article class="card"><h3>Multi-source data integration</h3>
+      <p>ETL from CSV files, Excel sheets and PostgreSQL into one database, with Power BI visuals on top.</p>
+      <div class="tags"><span>ETL</span><span>PostgreSQL</span><span>Power BI</span></div>
+      <div class="links"><a href="https://github.com/Crocsover/ETL-PIPELINES/tree/main/etl">GitHub</a><a href="https://lnkd.in/p/gGknHEPe">Video</a></div></article>
+    <article class="card"><h3>Pokémon web scraping</h3>
+      <p>Scrapes attributes, abilities and stats, structures them with pandas, stores them in Databricks and charts type distributions and evolution trends.</p>
+      <div class="tags"><span>Python</span><span>pandas</span><span>Databricks</span></div>
+      <div class="links"><a href="https://github.com/Crocsover/ETL-PIPELINES/tree/main/Pokemon_Webscraping_ETL">GitHub</a></div></article>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education and certifications</h2>
+  <p><strong>Bachelor in Industrial Technology, major in Electronics</strong><br>Marikina Polytechnic College, 2014 to 2018</p>
+  <p>Computing micro specialization pathway (SPARTA), Data Governance micro specialization pathway (SPARTA), and Data Engineer pathway statement of accomplishment (DataCamp).</p>
+</section>
+</main>
+
+<footer id="contact">
+  <strong>Get in touch:</strong> <a href="mailto:wrenzcrocs@gmail.com">wrenzcrocs@gmail.com</a> · <a href="https://github.com/YOUR-USERNAME">GitHub</a> · San Mateo, Rizal, Philippines
+</footer>
+</div>
+</body>
+</html>
